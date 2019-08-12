@@ -143,6 +143,9 @@ export default {
       improvementList: [],
     }
   },
+  created() {
+    document.title = `"中医9种体质测试"`    
+  },
   methods: {
     drop_down(index) {
       // debugger

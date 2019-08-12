@@ -41,7 +41,7 @@
 <script>
 export default {
   created() {
-    document.title = `"中医9中体质测试"`
+    document.title = `"中医9种体质测试"`
   },
   methods: {
     navigateTo(path) {

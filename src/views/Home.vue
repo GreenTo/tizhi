@@ -74,7 +74,7 @@
           <div class="container option-container">
             <input type="submit" class="hidden-button">
             <a class="submit" id="submitButton" ref="submit">
-              <img @click="submitAnswer()">
+              <img @click="submitAnswer()" src="../assets/submit.png">
             </a>
           </div>
 
@@ -126,6 +126,7 @@ export default {
     //   // 获取不同手机的物理像素（dpr）,以便适配rem
     //   this.defaultOffset = document.querySelector('.scroller').clientHeight || this.defaultOffset
     // }
+    document.title = `"中医9种体质测试"`
   },
   mounted() {
     this.initialStyle()
@@ -298,8 +299,7 @@ export default {
       }
 
       // 切换下一题
-      if(index == this.answers.length && index < this.questions.length) {
-        console.log('切换下一题')
+      if(index == this.answers.length && index < this.questions.length-1) {
         var 
           nextQuestion = document.getElementById('question' + (index+1)),
           ul = this.$refs.ul
@@ -669,7 +669,6 @@ ul.row {
     height: 60px;
     background: url('../assets/submit.png') no-repeat;
     background-size: 220px 60px;
-    background-color: #fff;
 }
 .option-statement {
     max-width: 720px;
